@@ -53,7 +53,12 @@
         cmd_duration.show_milliseconds = true;
         cmd_duration.style = "bold #5277C3";
         status.disabled = false;
+        git_branch.format = "[$symbol](bold #5277C3)[$branch(:$remote_branch)](bold white) ";
         git_metrics.disabled = false;
+        git_metrics.format = "([+]($added_style)$added)([-]($deleted_style)$deleted) ";
+        git_metrics.added_style = "#7EBAE4";
+        git_metrics.deleted_style = "#7EBAE4";
+        git_status.style = "bold #5277C3";
 
         # Symbols
         aws.symbol = "  ";
