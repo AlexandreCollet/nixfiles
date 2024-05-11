@@ -26,6 +26,14 @@
 
     # Enable networking
     networking.networkmanager.enable = true;
+    networking.hosts = {
+        "127.0.0.1" = [
+            "l2r.local"
+            "api.l2r.local"
+            "storybook.l2r.local"
+            "emails.l2r.local"
+        ];
+    };
 
     # Set your time zone.
     time.timeZone = "Europe/Paris";
