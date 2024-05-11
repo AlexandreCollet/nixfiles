@@ -89,15 +89,11 @@
         extraGroups = [ "networkmanager" "wheel" "docker"];
     };
 
+    # Virtualisation
     virtualisation.docker.enable = true;
-    virtualisation.docker.rootless = {
-        enable = true;
-        setSocketVariable = true;
-    };
-
-    environment.systemPackages = with pkgs; [
-        git
-    ];
+    virtualisation.docker.autoPrune.enable = true;
+    virtualisation.docker.autoPrune.dates = "weekly";
+    virtualisation.docker.autoPrune.flags = [ "--all" "--volumes" ];
 
     fonts.packages = with pkgs; [
         fira-code-nerdfont
