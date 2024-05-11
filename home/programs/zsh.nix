@@ -9,6 +9,7 @@
         enableCompletion = true;
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
+        autocd = true;
 
         shellAliases = {
             update = "sudo nixos-rebuild switch --flake ~/nixfiles/.#lenovo-p14s";
@@ -19,6 +20,23 @@
 
         history.size = 10000;
         history.path = "${config.xdg.dataHome}/zsh/history";
+        history.share = true;
+        history.ignoreDups = true;
+        history.ignoreAllDups = true;
+        history.expireDuplicatesFirst = true;
+
+        historySubstringSearch.enable = true;
+        historySubstringSearch.searchUpKey = "$terminfo[kcuu1]";
+        historySubstringSearch.searchDownKey = "$terminfo[kcud1]";
+
+        initExtra = ''
+            setopt ALWAYS_TO_END
+            setopt AUTO_LIST
+            setopt AUTO_MENU
+            setopt INC_APPEND_HISTORY
+
+            zstyle ':completion:*' menu select
+        '';
     };
 
     programs.starship.enable = true;
