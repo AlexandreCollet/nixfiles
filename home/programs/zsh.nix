@@ -26,8 +26,8 @@
         history.expireDuplicatesFirst = true;
 
         historySubstringSearch.enable = true;
-        historySubstringSearch.searchUpKey = "$terminfo[kcuu1]";
-        historySubstringSearch.searchDownKey = "$terminfo[kcud1]";
+        historySubstringSearch.searchUpKey = "^[[A";
+        historySubstringSearch.searchDownKey = "^[[B";
 
         initExtra = ''
             setopt ALWAYS_TO_END
