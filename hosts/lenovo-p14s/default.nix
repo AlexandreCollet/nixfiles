@@ -87,12 +87,8 @@
         isNormalUser = true;
         description = "Alexandre Collet";
         extraGroups = [ "networkmanager" "wheel" "docker"];
-        shell = pkgs.zsh;
     };
 
-    # Allow unfree packages
-    programs.zsh.enable = true;
-    
     virtualisation.docker.enable = true;
     virtualisation.docker.rootless = {
         enable = true;
