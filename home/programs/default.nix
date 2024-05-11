@@ -1,6 +1,7 @@
 {
   imports = [
     ./browsers.nix
+    ./dev.nix
     ./git.nix
     ./kitty.nix
     ./navi.nix
