@@ -3,7 +3,7 @@
 declare -A monitors
 declare -A setups
 
-monitors[laptop]='"Chimei Innolux Corporation 0x14F5"'
+monitors[laptop]='"AU Optronics 0x323D"'
 monitors[home_center]='"Dell Inc. DELL U2414H 9TG464BE2EPL"'
 
 setups[default]="[${monitors[laptop]}]"
