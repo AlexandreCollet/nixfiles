@@ -4,6 +4,7 @@
         ./hyprland
         ./waybar.nix
         ./rofi
+        ./screenshot.nix
     ];
 
     home.packages = with pkgs; [
