@@ -12,5 +12,7 @@
         pavucontrol
         # Bluetooth configuration tool
         blueberry
+        # Wayland clipboard utilities
+        wl-clipboard
     ];
 }
