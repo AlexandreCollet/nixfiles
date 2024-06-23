@@ -48,6 +48,8 @@
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
     programs.hyprland.enable = true;
+    security.pam.services.hyprlock = {};
+
 
     # Keyboard
     services.xserver.xkb.layout = "fr";

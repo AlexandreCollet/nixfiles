@@ -4,6 +4,7 @@
         ./hyprland
         ./waybar.nix
         ./rofi
+        ./hyprlock.nix
         ./screenshot.nix
     ];
 
