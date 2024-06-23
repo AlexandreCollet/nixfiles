@@ -15,28 +15,27 @@
         background = [
             {
                 monitor = "";
-                path = "~/nixfiles/wallpaper.png";
+                path = "~/nixfiles/wallpaper.jpg";
             }
         ];
 
-        image = [
+        label = [
             {
                 monitor = "";
-                position = "0, 80";
+                position = "0, 300";
                 halign = "center";
                 valign = "center";
-                path = "~/nixfiles/avatar.jpg";
-                size = 160;
-                rounding = -1;
-                border_size = 3;
-                border_color = "rgb(24, 25, 38)";
+                text = "$TIME";
+                text_align = "center";
+                color = "rgb(200, 200, 200)";
+                font_size = 75;
             }
         ];
 
         input-field = [
             {
                 monitor = "";
-                position = "0, -80";
+                position = "0, 0";
                 size = "400, 50";
                 dots_center = true;
                 fade_on_empty = false;
