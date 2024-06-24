@@ -5,9 +5,11 @@ declare -A setups
 
 monitors[laptop]='"AU Optronics 0x323D"'
 monitors[home_center]='"Dell Inc. DELL U2414H 9TG464BE2EPL"'
+monitors[lc]='"AOC 24B1W GMXM4HA523391"'
 
 setups[default]="[${monitors[laptop]}]"
 setups[home_nodock]="[${monitors[laptop]}, ${monitors[home_center]}]"
+setups[lc]="[${monitors[laptop]}, ${monitors[lc]}]"
 
 update_setup() {
     monitors=$(hyprctl monitors all -j)
