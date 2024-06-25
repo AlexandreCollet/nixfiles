@@ -13,6 +13,8 @@
         grapecity.gc-excelviewer 
         # Intelligent Tailwind CSS tooling
         bradlc.vscode-tailwindcss
+        # Kubernetes 
+        ms-kubernetes-tools.vscode-kubernetes-tools
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         # Dark theme
         {
