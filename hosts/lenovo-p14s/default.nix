@@ -14,6 +14,9 @@
     boot.loader.efi.canTouchEfiVariables = true;
     boot.tmp.cleanOnBoot = true;
 
+    # Hardware
+    services.hardware.bolt.enable = true;
+
     # Networking
     networking.hostName = "nixos"; # Define your hostname.
     networking.networkmanager.enable = true;
@@ -49,7 +52,6 @@
     services.xserver.desktopManager.gnome.enable = true;
     programs.hyprland.enable = true;
     security.pam.services.hyprlock = {};
-
 
     # Keyboard
     services.xserver.xkb.layout = "fr";
