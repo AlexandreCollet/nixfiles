@@ -29,32 +29,32 @@ in {
         };
     };
 
-    home.activation.navi-clone-repositories = hm.dag.entryAfter [ "installPackages" ] ''
-        PATH="${pkgs.navi}/bin:${pkgs.git}/bin:${pkgs.openssh}/bin:$PATH"
-        ${configDir}/navi/repositories.sh clone_all
-    '';
+    # home.activation.navi-clone-repositories = hm.dag.entryAfter [ "installPackages" ] ''
+    #     PATH="${pkgs.navi}/bin:${pkgs.git}/bin:${pkgs.openssh}/bin:$PATH"
+    #     ${configDir}/navi/repositories.sh clone_all
+    # '';
 
-    systemd.user.timers.navi-pull-repositories = {
-        Unit = {
-            Description = "Call navi-pull-repositories.service 5 minutes after boot and each hour.";
-        };
-        Install = {
-            WantedBy = ["timers.target"];
-        };
-        Timer = {
-            OnBootSec = "5m";
-            OnUnitActiveSec = "2h";
-        };
-    };
+    # systemd.user.timers.navi-pull-repositories = {
+    #     Unit = {
+    #         Description = "Call navi-pull-repositories.service 5 minutes after boot and each hour.";
+    #     };
+    #     Install = {
+    #         WantedBy = ["timers.target"];
+    #     };
+    #     Timer = {
+    #         OnBootSec = "5m";
+    #         OnUnitActiveSec = "2h";
+    #     };
+    # };
 
-    systemd.user.services.navi-pull-repositories = {
-        Unit = {
-            Description = "Pull all navi repositories.";
-        };
-        Service = {
-            ExecStart = "${configDir}/navi/repositories.sh pull_all";
-        };
-    };
+    # systemd.user.services.navi-pull-repositories = {
+    #     Unit = {
+    #         Description = "Pull all navi repositories.";
+    #     };
+    #     Service = {
+    #         ExecStart = "${configDir}/navi/repositories.sh pull_all";
+    #     };
+    # };
 
     home.file."${configDir}/navi/repositories.sh" = {
         enable = true;
