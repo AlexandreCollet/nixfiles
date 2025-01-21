@@ -21,6 +21,7 @@
                         home-manager.useUserPackages = true;
                         home-manager.extraSpecialArgs = inputs;
                         home-manager.users.alexandrec = import ./home;
+                        home-manager.backupFileExtension = "backup";
                     }
                 ];
             };

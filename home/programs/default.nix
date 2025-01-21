@@ -1,5 +1,6 @@
 {
   imports = [
+    ./azurestorageexplorer.nix
     ./3d_printing.nix
     ./browsers.nix
     ./dev.nix

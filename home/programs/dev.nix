@@ -3,5 +3,6 @@
         pgcli
         postman
         poedit
+        genymotion
     ];
 }

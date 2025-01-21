@@ -5,5 +5,7 @@
         retry
         zip
         unzip
+        dig
+        qgis
     ];
 }

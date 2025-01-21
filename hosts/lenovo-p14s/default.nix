@@ -51,6 +51,7 @@
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
     programs.hyprland.enable = true;
+    programs.hyprland.xwayland.enable = true;
     security.pam.services.hyprlock = {};
 
     # Keyboard
@@ -74,6 +75,7 @@
         alsa.enable = true;
         alsa.support32Bit = true;
         pulse.enable = true;
+        audio.enable = true;
     };
 
 
@@ -81,7 +83,7 @@
     users.users.alexandrec = {
         isNormalUser = true;
         description = "Alexandre Collet";
-        extraGroups = [ "networkmanager" "wheel" "docker"];
+        extraGroups = [ "networkmanager" "wheel" "docker" "adbusers"];
     };
 
     # Virtualisation
@@ -90,11 +92,19 @@
     virtualisation.docker.autoPrune.dates = "weekly";
     virtualisation.docker.autoPrune.flags = [ "--all" "--volumes" ];
 
+    virtualisation.waydroid.enable = true;
+
+    virtualisation.virtualbox.host.enable = true;
+    users.extraGroups.vboxusers.members = [ "alexandrec" ];
+
+
     # Packages
     nixpkgs.config.allowUnfree = true;
     environment.systemPackages = with pkgs; [ git ];
+    programs.adb.enable = true;
 
     # Fonts
     fonts.packages = with pkgs; [ fira-code-nerdfont ];
+
 
 }

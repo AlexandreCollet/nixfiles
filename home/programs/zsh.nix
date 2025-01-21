@@ -36,6 +36,10 @@
             setopt INC_APPEND_HISTORY
 
             zstyle ':completion:*' menu select
+
+            bindkey "^[[3~" delete-char   # Touche Suppr
+            bindkey "^[[H" beginning-of-line  # Touche Début
+            bindkey "^[[F" end-of-line        # Touche Fin
         '';
     };
 
