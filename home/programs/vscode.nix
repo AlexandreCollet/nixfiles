@@ -7,9 +7,7 @@
         # IntelliSense (Pylance), Linting, ...
         # ms-python.python 
         # Open any folder or repository inside a Docker container
-        ms-vscode-remote.remote-containers 
-        # Kubernetes 
-        ms-kubernetes-tools.vscode-kubernetes-tools
+        ms-vscode-remote.remote-containers
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         # Dark theme
         {

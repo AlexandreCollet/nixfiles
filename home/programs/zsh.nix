@@ -55,6 +55,7 @@
             "$git_state"
             "$git_metrics"
             "$git_status"
+            "$nix_shell"
             # Right
             "$fill"
             "$status"
@@ -81,6 +82,8 @@
         git_metrics.added_style = "#7EBAE4";
         git_metrics.deleted_style = "#7EBAE4";
         git_status.style = "bold #5277C3";
+        nix_shell.format = "via [$symbol$name( \($state\))]($style)";
+        nix_shell.style = "bold #5277C3";
 
         # Symbols
         aws.symbol = "  ";
